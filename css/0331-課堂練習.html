@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        *{box-sizing: border-box;}
+        body{margin: 0;}
+        .topbot_img{
+            height: 100vh;
+            background-image: url(./img/34902574392_3c4b1c8667_b-941x480.jpg);
+
+        }
+        .img{
+            position: relative;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .topbot_imga{
+            height: 100%;
+            width: 100%;
+            background-color: rgba(255, 255,255, 0.3);
+            position: relative;
+        }
+        h3{
+        text-align: center;
+
+        }
+        .text_word{
+            margin: 15px 0;
+}
+        .img_word{
+            background-color: rgba(202, 202, 202, 0.4);
+            font-size: 36px;
+            font-weight: bolder;
+            letter-spacing: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%);
+            padding: 16px;
+        }
+
+        #boxtop_word{
+            padding: 50px 80px;
+            background-color: white;
+            position: relative;
+        }
+        #boxtop_word_at{
+            position: absolute;
+            top: -55px;
+            left: 0;
+        }
+        .boxmid_img{
+            height: 400px;
+            position: relative;
+        }
+        #boxmid_img{
+            height: 400px;
+            position: relative;
+            background-image: url(./img/blKNHoTiHk.jpg);
+        }
+        .boxmid_img_word{
+            width:100% ;
+            height: 45px;
+            font-size: 36px;
+            color: white;
+            text-align: center;
+            position: absolute;
+            top: calc(50% - 18px);
+            padding: 4.5px 10px;
+        }
+        #boxmid_word{
+            position: relative;
+        }
+        #boxmid_word_at{
+            position: absolute;
+            top: -55px;
+            left: 0;
+        }
+        .boxmid_word_w{
+            height: 57px;
+            padding: 50px 80px;
+            background-color: rgb(37, 40, 54);
+            position: relative;
+        }
+        #boxmid_word2{
+position: relative;
+        }
+        #boxmid_word2_at{
+            position: absolute;
+            top: -55px;
+            left: 0;
+        }
+        .boxmid_word2_w{
+            height: 27px;
+            margin: 15px 0;
+            font-size: 24px;
+            color: white;
+            position: absolute;
+            top: calc(50% - 27px);
+        }
+
+        #boxmid_img2{
+            height: 400px;
+            position: relative;
+            background-image: url(./img/unnamed.jpg);
+        }
+
+        #boxmid_word2_w{
+            height: 27px;
+            margin: 15px 0;
+            font-size: 24px;
+            color: white;
+            position: absolute;
+            top: calc(50% - 27px);
+        }
+        .nav{
+            width: 100%;
+            height: 55px;
+            padding: 19px;
+            background-color: aqua;
+            position: fixed;
+            top: 0;
+            left: 1;
+            z-index: 1;
+        }
+        a{
+            margin-right: 15px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="#boxtop_word_at">文字1</a>
+        <a href="#boxmid_word_at">文字2</a>
+        <a href="#boxmid_word2_at">文字3</a>
+    </div>
+
+    <div id="boxtop_img" class="topbot_img img">
+        <div class="topbot_imga"></div>
+        <div id="boxtop_img_word" class="img_word">SCROLL DOWN</div>
+    </div>
+    <div id="boxtop_word" class="text_word">
+        <div id="boxtop_word_at"></div>
+        <h3>PARALLAX DEMO</h3>
+        <span>Parallax scrolling is a web site trend where the background content is moved at a different speed than the foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc nisl dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio. Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante augue etiam maecenas, porta porttitor placerat leo.</span>
+
+    </div>
+    <div id="boxmid_img" class="boxmid_img img">
+        <div id="boxmid_img_word" class="boxmid_img_word">LESS HEIGHT</div>
+    </div>
+    <div id="boxmid_word" class="boxmid_word_w" >
+        <div id="boxmid_word_at"></div>
+        <div id="boxmid_word_w" class="boxmid_word2_w">Scroll up and down to really get the feeling of how Parallax Scrolling works.</div>
+    </div>
+    <div id="boxmid_img2" class="boxmid_img_word img">
+        <div id="boxmid_img2_word" class="boxmid_img_word">SCROLL UP</div>
+    </div>
+    <div id="boxmid_word2" class="boxmid_word_w" >
+        <div id="boxmid_word2_at"></div>
+        <div id="boxmid_word2_w" class="boxmid_word2_w">Scroll up and down to really get the feeling of how Parallax Scrolling works.
+        </div>
+    </div>
+    <div id="boxbot_img" class="topbot_img img">
+        <div class="topbot_imga"></div>
+        <div id="boxbot_img_w" class="img_word">COOL!</div>
+    </div>
+</body>
+</html>

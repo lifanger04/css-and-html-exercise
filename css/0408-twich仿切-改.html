@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding-left: 20px;
+            padding-top: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        a{
+            text-decoration: none;
+            
+        }
+        .top{
+            width: 100%;
+            height: 50px;
+            border-bottom: 1px solid gray;
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: white;
+            z-index: 1;
+        }
+        nav .top{
+            width: 100%;
+            height: 50px;
+            /* background-color: aquamarine; */
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid gray;
+            background-color: white;
+        }
+        /*discover 開頭*/
+        .discover{
+            width: 165px;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            
+        }
+        .logo{
+            width: 30px;
+            height: 30px;
+            /* background-color: green; */
+            background-image: url(./img/twitch的logo.png);
+            background-size: cover;
+        }
+        
+        .more{
+            width: 30px;
+            height: 30px;
+            background-position: center;
+            background-size: cover;
+            background-image: url(./img/三點.png);
+            /* background-color: turquoise; */
+            
+        }
+        /*discover結尾*/
+        /*searth開始 */
+        .search{
+            width: 390px;
+            height: 100%;
+            /* background-color: brown; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .input{
+            width: 355px;
+            height: 36px;
+            margin-right: 1px;
+            background-color: rgb(214, 214, 214);
+            border-radius: 5px 0px 0px 5px;
+            outline: 0px;
+            border: 0px;
+            padding-left: 15px;
+            
+        }
+        .search-btn{
+            width: 35px;
+            height: 36px;
+            background-image: url(./img/放大鏡.png);
+            background-size: 80%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: white;
+
+        }
+        /*searth結尾 */
+        /*option開始*/
+        .option{
+            width: 190px;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        .notification{
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            background-image: url(./img/crown.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .login{
+            width: 46px;
+            height: 31px;
+            background-color: rgb(189, 189, 189);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            font-size: 12px;
+
+        }
+        .registered{
+            width: 46px;
+            height: 31px;
+            background-color: rgb(114, 10, 233);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            color: white;
+            font-size: 12px;
+
+        }
+        .personal{
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            margin-right: 10px;
+            background-image: url(./img/user.png);
+            background-position: center;
+            background-size: cover;
+        }
+        /*option結尾*/
+        /*recommend-channel開始 */
+        .recommend-channel{
+            width: 50px;
+            height: calc(100vh - 50px);
+            background-color: rgb(224, 224, 224);
+            padding-top: 10px;
+            position: fixed;
+            top: 50px;
+            left: 0;
+        }
+        .channel{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: green;
+            margin: 0 auto 10px;
+        }
+        /*recommend-channel結尾 */
+        /* container開始 */
+        main{
+            padding: 0px 30px;
+        }
+        .container{
+            width: 100%;
+            padding-top: 30px;
+            padding-left: 30px;
+        }
+        .title{
+            width: 100%;
+            font-size: 55px;
+            font-weight: 600;
+            margin: 0px;
+            margin-bottom: 5px;
+
+        }
+        .text{
+            width: 100%;
+            font-weight: 600;
+            font-size: 24px;
+            margin-top: 0px;
+            margin-bottom: 45px;
+        }
+        .games{
+            width: 100%;
+            /* height: 155px; */
+            background-color: white;
+            margin-bottom: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        /* container結尾 */
+        /* game-card開始 */
+        .game-card{
+            width: 293px;
+            height: 70px;
+            border-radius: 5px;
+            background-color: rgb(247, 247, 247);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px 0px;
+        }
+        .img{
+            width: 45px;
+            height: 50px;
+            background-color: rgb(200, 152, 255);
+            margin-right: 10px;
+        }
+        .game-card .text{
+            width: 225px;
+            height: 50px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+        .game-card .text .title{
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .game-card .text .condition{
+            font-size: 10px;
+            color: grey;
+        }
+        .game-card .text .live-icon{
+            width: 40px;
+            height: 20px;
+            font-size: 12PX;
+            background-color: red;
+            border-radius: 5px;
+            line-height: 20px;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: white;
+        }
+        /* game-card結尾 */
+        .title2{
+            width: 100%;
+            font-size: 36px;
+            font-weight: 600;
+            margin: 0px;
+            margin-bottom: 0px;
+            margin-top: 26px;
+        }
+        .text2{
+            width: 100%;
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: grey;
+        }
+        /* video開始 */
+        .video{
+            width: 100%;
+            /* height: 500px; */
+            display: flex;
+            background-color: white;
+        }
+        .highlight{
+            width: 590px;
+            /* height: 500px; */
+            /* min-width: 500px; */
+            /* background-color: white;
+            float: left; */
+            margin-right: 20px;
+        }
+        .highlight .thumbnail{
+            width: 100%;
+            height: 350px;
+            /* background-color: brown; */
+            background-image: url(./img/unnamed.jpg);
+            position: relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+        .highlight .thumbnail .live-icon{
+            width: 40px;
+            height: 20px;
+            font-size: 12PX;
+            background-color: red;
+            border-radius: 5px;
+            line-height: 20px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            color: white;
+        }
+        .live-condition{
+            color: white;
+            position: absolute;
+            left: 10px;
+            bottom: 15px;
+            background-color: rgb(0, 0, 0);
+        }
+        .highlight .game-name{
+            width: 100%;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            margin: 15px 0px;
+
+        }
+        .highlight .game-name .game-name-img{
+            width: 20px;
+            height: 20px;
+            background-image: url(./img/unnamed.jpg);
+            border-radius: 50%;
+            float: left;
+            margin-top: 10px;
+            background-position: center;
+            background-size: cover;
+        }
+        .highlight .game-name .game-name-word{
+            float: left;
+            margin-left: 10px;
+            margin-top: 10px;
+            color: rgb(114, 10, 233);
+            font-weight: 600;
+
+
+        }
+        
+        .highlight .title{
+            width: 100%;
+            /* height: 40px; */
+            font-size: 16px;
+            /* margin: 0; */
+            line-height: 40px;
+            
+        }
+        
+        .highlight .description{
+            width: 100%;
+            height: 40px;
+            font-size: 14px;
+        }
+        /* video結尾 */
+        /* other開始 */
+        .other{
+            width: calc(100% - 610px);
+            /* height: 500px; */
+            background-color: hsl(0, 0%, 100%);
+            /* float: left; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .video-card{
+            width: 285px;
+            margin-bottom: 10px;
+            /* height: 260px; */
+            /* background-color: rgb(255, 255, 255); */
+            /* margin-left: 20px; */
+            /* float: left;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between; */
+            
+        }
+        .video-card .thumbnail{
+            width: 100%;
+            height: 165px;
+            /* background-color: brown; */
+            background-image: url(./img/unnamed.jpg);
+            position: relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+        .video-card .thumbnail .live-icon{
+            width: 40px;
+            height: 20px;
+            font-size: 12PX;
+            background-color: red;
+            border-radius: 5px;
+            line-height: 20px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            left: 10px;
+            top: 15px;
+            color: white;
+        }
+        .live-condition{
+            height: 20px;
+            color: white;
+            position: absolute;
+            left: 10px;
+            bottom: 15px;
+            font-size: 14px;
+            background-color: rgba(0, 0, 0, 0.534);
+        }
+        .video-card .game-name{
+            width: 100%;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            margin: 10px 0px;
+
+            
+        }
+        .video-card .game-name .game-name-img{
+            width: 20px;
+            height: 20px;
+            background-image: url(./img/unnamed.jpg);
+            border-radius: 50%;
+            /* float: left; */
+            margin-top: 10px;
+            background-position: center;
+            background-size: cover;
+        }
+        .video-card .game-name .game-name-word{
+            /* float: left; */
+            margin-left: 10px;
+            margin-top: 12px;
+            font-weight: 600;
+
+        }
+        .video-card .game-name .game-name-word a{
+            color: blueviolet;
+        }
+        .video-card .title{
+            width: 100%;
+            /* height: 40px; */
+            margin-bottom: 5px;
+            font-size: 14px;
+            /* margin: 0; */
+            /* margin-top: 10px; */
+            /* line-height: 14px; */
+        }
+        .video-card .description{
+            width: 100%;
+            /* height: 25px; */
+            font-size: 14px;
+            /* line-height: 14px; */
+            
+            
+        }
+        /* other結尾 */
+        @media(max-width:1330px){
+            .highlight{
+                width: 285px;
+            }
+            .highlight .thumbnail{
+                height: 165px;
+                width: 100%;
+            }
+            .highlight .game-name{
+                margin: 10px 0px;
+                width: 285px;
+            }
+            .game-name-word{
+                font-weight: 500;
+
+            }
+            .highlight .title{
+                width: 100%;
+                margin-bottom: 5px;
+                /* font-weight: normal; */
+                font-size: 16px;
+                line-height: 16px;
+            }
+            .highlight .description{
+                width: 100%;
+                font-size: 12px;
+            }
+            .other{
+                width: calc(100% - 305px);
+            }
+
+        }
+        @media(max-width:700px){
+            .video{
+                flex-direction: column;
+                align-items: center;
+            }
+            .highlight{
+                margin-right: 0px;
+                width: 100%;
+                height: unset;
+            }
+            .highlight .thumbnail{
+                height: 250px;
+                width: 100%;
+            }
+            .highlight .game-name{
+                margin: 10px 0px;
+                width: 100%;
+                font-weight: normal;
+            }
+            .highlight .title{
+                width: 100%;
+                margin-bottom: 5px;
+                /* font-weight: normal; */
+                font-size: 16px;
+                line-height: 16px;
+            }
+            .highlight .description{
+                width: 100%;
+                font-size: 12px;
+            }
+            .other{
+                width: 100%;
+                margin-top: 10px;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+
+            }
+            .video-card{
+                width: 100%;
+                height: unset;
+
+            }
+            .video-card .thumbnail{
+                height: 260px;
+                width: 100%;
+                float: left;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="top">
+            <div class="discover">
+                <div class="logo"></div>
+                <div class="browse">瀏覽</div>
+                <div class="more"></div>
+            </div>
+            <div class="search">
+                <input type="text" class="input" placeholder="搜尋">
+                <div class="search-btn"></div>
+            </div>
+            <div class="option">
+                <div class="notification"></div>
+                <div class="login">登入</div>
+                <div class="registered">註冊</div>
+                <div class="personal"></div>
+            </div>
+        </div>
+        <div class="recommend-channel">
+            <div class="channel"></div>
+            <div class="channel"></div>
+            <div class="channel"></div>
+            <div class="channel"></div>
+            <div class="channel"></div>
+            <div class="channel"></div>
+            <div class="channel"></div>
+            <div class="channel"></div>
+            <div class="channel"></div>
+            <div class="channel"></div>
+            <div class="channel"></div>
+            <div class="channel"></div>
+            <div class="channel"></div>
+            <div class="channel"></div>
+            <div class="channel"></div>
+            <div class="channel"></div>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="title">電競</div>
+            <div class="text">即時賽況、賽事精華和您最愛的職業玩家都在這裡</div>
+            <div class="games">
+                <div class="game-card">
+                    <div class="img"></div>
+                    <div class="text">
+                        <div class="title">League of Legends</div>
+                        <div class="condition">觀眾人數：1,347</div>
+                        <div class="live-icon">LIVE</div>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="img"></div>
+                    <div class="text">
+                        <div class="title">League of Legends</div>
+                        <div class="condition">觀眾人數：1,347</div>
+                        <div class="live-icon">LIVE</div>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="img"></div>
+                    <div class="text">
+                        <div class="title">League of Legends</div>
+                        <div class="condition">觀眾人數：1,347</div>
+                        <div class="live-icon">LIVE</div>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="img"></div>
+                    <div class="text">
+                        <div class="title">League of Legends</div>
+                        <div class="condition">觀眾人數：1,347</div>
+                        <div class="live-icon">LIVE</div>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="img"></div>
+                    <div class="text">
+                        <div class="title">League of Legends</div>
+                        <div class="condition">觀眾人數：1,347</div>
+                        <div class="live-icon">LIVE</div>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="img"></div>
+                    <div class="text">
+                        <div class="title">League of Legends</div>
+                        <div class="condition">觀眾人數：1,347</div>
+                        <div class="live-icon">LIVE</div>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="img"></div>
+                    <div class="text">
+                        <div class="title">League of Legends</div>
+                        <div class="condition">觀眾人數：1,347</div>
+                        <div class="live-icon">LIVE</div>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="img"></div>
+                    <div class="text">
+                        <div class="title">League of Legends</div>
+                        <div class="condition">觀眾人數：1,347</div>
+                        <div class="live-icon">LIVE</div>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="img"></div>
+                    <div class="text">
+                        <div class="title">League of Legends</div>
+                        <div class="condition">觀眾人數：1,347</div>
+                        <div class="live-icon">LIVE</div>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="img"></div>
+                    <div class="text">
+                        <div class="title">League of Legends</div>
+                        <div class="condition">觀眾人數：1,347</div>
+                        <div class="live-icon">LIVE</div>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="img"></div>
+                    <div class="text">
+                        <div class="title">League of Legends</div>
+                        <div class="condition">觀眾人數：1,347</div>
+                        <div class="live-icon">LIVE</div>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <div class="img"></div>
+                    <div class="text">
+                        <div class="title">League of Legends</div>
+                        <div class="condition">觀眾人數：1,347</div>
+                        <div class="live-icon">LIVE</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="title2">實況中的對戰</div>
+            <div class="text2">我們認為您會喜歡的最精彩 Live 比賽和對戰</div>
+            <div class="video">
+                <div class="highlight">
+                    <div class="thumbnail">
+                        <div class="live-icon">LIVE</div>
+                        <div class="live-condition">觀眾人數:4.2萬</div>
+                    </div>
+                    <div class="game-name"></a>
+                        <div class="game-name-img"></div>
+                        <div class="game-name-word"><a href="https://www.twitch.tv/lpl">LPL</a></div>
+                    </div>
+                    <div class="title">EDG vs. TES - Day 8 Playoff Round 4 | LPL Spring Split (2021)</div>
+                    <div class="description">League of Legends•英文</div>
+                    
+                    
+                </div>
+                <div class="other">
+                    <div class="video-card">
+                        <div class="thumbnail">
+                            <div class="live-icon">LIVE</div>
+                            <div class="live-condition">觀眾人數:4.2萬</div>
+                        </div>
+                        <div class="game-name"></a>
+                            <div class="game-name-img"></div>
+                            <div class="game-name-word"><a href="https://www.twitch.tv/lpl">LPL</a></div>
+                        </div>
+                        <div class="title">EDG vs. TES - Day 8 Playoff Round 4 | LPL Spring Split (2021)</div>
+                        <div class="description">League of Legends•英文</div>
+                    </div>
+                    <div class="video-card">
+                        <div class="thumbnail">
+                            <div class="live-icon">LIVE</div>
+                            <div class="live-condition">觀眾人數:4.2萬</div>
+                        </div>
+                        <div class="game-name"></a>
+                            <div class="game-name-img"></div>
+                            <div class="game-name-word"><a href="https://www.twitch.tv/lpl">LPL</a></div>
+                        </div>
+                        <div class="title">EDG vs. TES - Day 8 Playoff Round 4 | LPL Spring Split (2021)</div>
+                        <div class="description">League of Legends•英文</div>
+                    </div>
+                    <div class="video-card">
+                        <div class="thumbnail">
+                            <div class="live-icon">LIVE</div>
+                            <div class="live-condition">觀眾人數:4.2萬</div>
+                        </div>
+                        <div class="game-name"></a>
+                            <div class="game-name-img"></div>
+                            <div class="game-name-word"><a href="https://www.twitch.tv/lpl">LPL</a></div>
+                        </div>
+                        <div class="title">EDG vs. TES - Day 8 Playoff Round 4 | LPL Spring Split (2021)</div>
+                        <div class="description">League of Legends•英文</div>
+                    </div>
+                    <div class="video-card">
+                        <div class="thumbnail">
+                            <div class="live-icon">LIVE</div>
+                            <div class="live-condition">觀眾人數:4.2萬</div>
+                        </div>
+                        <div class="game-name"></a>
+                            <div class="game-name-img"></div>
+                            <div class="game-name-word"><a href="https://www.twitch.tv/lpl">LPL</a></div>
+                        </div>
+                        <div class="title">EDG vs. TES - Day 8 Playoff Round 4 | LPL Spring Split (2021)</div>
+                        <div class="description">League of Legends•英文</div>
+                    </div>
+                    <div class="video-card">
+                        <div class="thumbnail">
+                            <div class="live-icon">LIVE</div>
+                            <div class="live-condition">觀眾人數:4.2萬</div>
+                        </div>
+                        <div class="game-name"></a>
+                            <div class="game-name-img"></div>
+                            <div class="game-name-word"><a href="https://www.twitch.tv/lpl">LPL</a></div>
+                        </div>
+                        <div class="title">EDG vs. TES - Day 8 Playoff Round 4 | LPL Spring Split (2021)</div>
+                        <div class="description">League of Legends•英文</div>
+                    </div>
+                    <div class="video-card">
+                        <div class="thumbnail">
+                            <div class="live-icon">LIVE</div>
+                            <div class="live-condition">觀眾人數:4.2萬</div>
+                        </div>
+                        <div class="game-name"></a>
+                            <div class="game-name-img"></div>
+                            <div class="game-name-word"><a href="https://www.twitch.tv/lpl">LPL</a></div>
+                        </div>
+                        <div class="title">EDG vs. TES - Day 8 Playoff Round 4 | LPL Spring Split (2021)</div>
+                        <div class="description">League of Legends•英文</div>
+                    </div>
+                    <div class="video-card">
+                        <div class="thumbnail">
+                            <div class="live-icon">LIVE</div>
+                            <div class="live-condition">觀眾人數:4.2萬</div>
+                        </div>
+                        <div class="game-name"></a>
+                            <div class="game-name-img"></div>
+                            <div class="game-name-word"><a href="https://www.twitch.tv/lpl">LPL</a></div>
+                        </div>
+                        <div class="title">EDG vs. TES - Day 8 Playoff Round 4 | LPL Spring Split (2021)</div>
+                        <div class="description">League of Legends•英文</div>
+                    </div>
+                    <div class="video-card">
+                        <div class="thumbnail">
+                            <div class="live-icon">LIVE</div>
+                            <div class="live-condition">觀眾人數:4.2萬</div>
+                        </div>
+                        <div class="game-name"></a>
+                            <div class="game-name-img"></div>
+                            <div class="game-name-word"><a href="https://www.twitch.tv/lpl">LPL</a></div>
+                        </div>
+                        <div class="title">EDG vs. TES - Day 8 Playoff Round 4 | LPL Spring Split (2021)</div>
+                        <div class="description">League of Legends•英文</div>
+                    </div>    
+                </div>
+
+        </div>
+        
+        
+    </main>
+</body>
+</html>

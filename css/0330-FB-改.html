@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{box-sizing: border-box;}
+body{margin: 0;}
+#navbarall{
+    width: 100%;
+    height: 56px;
+    background-color: white;
+    padding: 8PX 16px;
+    position: relative;
+}
+
+#navbar_l{
+    width: 320PX;
+    height: 100%;
+    background-color: white;
+    float: left;
+}
+#navbar_l1{
+    width: 40PX;
+    height: 40px;
+    /* background-color: rgb(124, 148, 228); */
+    float: left;
+    border-radius: 50%;
+    margin: 0 10px 0 0;
+    background-image: url(./img/fb.png);
+}
+#navbar_l2{
+    width: 270PX;
+    height: 40px;
+    background-color: rgb(245, 245, 245);
+    float: left;
+    border-radius: 20px;
+    padding: 11px;
+}
+#navbar_l2_img{
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 0 5px 0 5px;
+    background-image: url(./img/magnifier.png);
+}
+#navbar_l2_input{
+    width: calc(100% - 30px);
+    height: 20px;
+    float: left;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 18px;
+}
+#navbar_m{
+    width: 650px;
+    height: 40px;
+    background-color: rgb(255, 151, 151);
+    position: absolute;
+    left: calc(50% - 325px);
+}
+#navbar_m1{
+    width: 20%;
+    height: 100%;
+    background-color: rgb(161, 161, 161);
+    float: left;
+}
+#navbar_m2{
+    width: 20%;
+    height: 100%;
+    background-color: rgb(211, 211, 211);
+    float: left;
+}
+#navbar_m3{
+    width: 20%;
+    height: 100%;
+    background-color: rgb(155, 155, 155);
+    float: left;
+}
+#navbar_m4{
+    width: 20%;
+    height: 100%;
+    background-color: rgb(201, 201, 201);
+    float: left;
+}
+#navbar_m5{
+    width: 20%;
+    height: 100%;
+    background-color: rgb(160, 160, 160);
+    float: left;
+}
+#navbar_r{
+    height: 40px;
+    position: absolute;
+    right: 16px;
+}
+#navbar_r1{
+    width: 100px;
+    height: 100%;
+    background-color: rgb(180, 180, 180);
+    float: left;
+    border-radius: 20px;
+    padding: 10px;
+}
+#navbar_r1_img{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 130, 130);
+    margin: 0 5px 0 0;
+    float: left;
+    border-radius: 10px;
+}
+#navbar_r1_name{
+    width: calc(100% - 25px);
+    height: 20px;
+    float: right;
+}
+#navbar_r2{
+    width: 40px;
+    height: 100%;
+    background-color: rgb(50, 36, 180);
+    float: left;
+    border-radius: 20px;
+    margin: 0 0 0 5px;
+
+}
+#navbar_r3{
+    width: 40px;
+    height: 100%;
+    background-color: rgb(78, 33, 202);
+    float: left;
+    border-radius: 20px;
+    margin: 0 0 0 5px;
+
+}
+#navbar_r4{
+    width: 40px;
+    height: 100%;
+    background-color: rgb(162, 146, 255);
+    float: left;
+    border-radius: 20px;
+    margin: 0 0 0 5px;
+
+}
+#navbar_r5{
+    width: 40px;
+    height: 100%;
+    background-color: rgb(41, 55, 255);
+    float: left;
+    border-radius: 20px;
+    margin: 0 0 0 5px;
+
+}
+#photoall{
+    width: 100%;
+    height: 620px;
+    background: rgb(128,125,162);
+    background: linear-gradient(180deg, rgba(128,125,162,1) 0%, rgba(255,255,255,1) 50%);
+    box-shadow: 0px 6px 3px 0px rgba(0,0,0,0.31);
+}
+#photoall_1{
+    width: 900px;
+    height: 158px;
+    margin: auto;
+
+}
+#photo1{
+    width: 940px;
+    height: 462px;
+    background-color: rgb(165, 238, 165);
+    background-image: url(./img/34902574392_3c4b1c8667_b-941x480.jpg);
+    margin: auto;
+    position: relative;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#photo1_1{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(123, 211, 184);
+    background-image: url(./img/unnamed.jpg);
+    position: absolute;
+    left: calc(50% - 100px);
+    top: 287px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+#photo1_1c{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: gray;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+}
+#photo1_2{
+    width: 136px;
+    height: 36px;
+    background-color: rgb(228, 125, 125);
+    position: absolute;
+    right: 20px;
+    bottom: 8px;
+    border-radius: 10px;
+    padding: 10px;
+}
+#photo1_2_img{
+    width: 16px;
+    height: 16px;
+    background-color: green;
+    /* margin: 0 5px 0 0; */
+    float: left;
+}
+#photo1_2_w{
+    height: 16px;
+    float: right;
+    padding: 4px 0;
+    line-height: 12px;
+}
+#photo2{
+    width: 100%;
+    height: 158px;
+}
+#photo2_1{
+    width: 100%;
+    height: 66px;
+    padding: 30px 0 0 0;
+}
+#photo2_w1{
+    font-size: 24px;
+    margin: auto;
+    text-align: center;
+}
+#photo2_2{
+    width: 100%;
+    height: 32px;
+    background-color: white;
+    border-bottom: 1px solid grey;
+}
+#photo2_w2{
+    font-size: 12px;
+    margin: auto;
+    text-align: center;
+}
+#photo2_3{
+    width: 100%; 
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+
+}
+#photo2_3_1{
+    height: 100%;
+    float: left;
+}
+#photo2_3_1btn{
+float: left;
+height: 100%;
+padding: 18.5px 15px;
+}
+#photo2_3_2btn_1{
+    height: 35px;
+    background-color: rgb(212, 212, 212);
+    border-radius: 5px;
+    float: left;
+    padding: 8px 5px;
+    
+}
+#photo2_3_2btn{
+    width: 45px;
+    height: 35px;
+    background-color: rgb(212, 212, 212);
+    border-radius: 5px;
+    float: left;
+    margin-left: 7px;
+}
+#photo2_3_2{
+height: 60px;
+float: right;
+}
+    </style>
+</head>
+<body>
+    <div id="navbarall">
+            <div id="navbar_l">
+                <div id="navbar_l1"></div>
+                <div id="navbar_l2">
+                    <div id="navbar_l2_img"></div>
+                    <input id="navbar_l2_input" type="text" placeholder=" 搜尋Facebook">
+                </div>
+            </div>
+            <div id="navbar_m">
+                <div id="navbar_m1"></div>
+                <div id="navbar_m2"></div>
+                <div id="navbar_m3"></div>
+                <div id="navbar_m4"></div>
+                <div id="navbar_m5"></div>
+            </div>
+            <div id="navbar_r">
+                <div id="navbar_r1">
+                    <div id="navbar_r1_img"></div>
+                    <div id="navbar_r1_name">你名字</div>
+                </div>
+                <div id="navbar_r2"></div>
+                <div id="navbar_r3"></div>
+                <div id="navbar_r4"></div>
+                <div id="navbar_r5"></div>
+            </div>
+    </div>
+    <div id="photoall">
+        <div id="photo1">
+            <div id="photo1_1">
+                <div id="photo1_1c"></div>
+            </div>
+            <div id="photo1_2">
+                <div id="photo1_2_img"></div>
+                <div id="photo1_2_w">編輯封面相片</div>
+            </div>
+        </div>
+        <div id="photoall_1">
+            <div id="photo2">
+                <div id="photo2_1">
+                    <div id="photo2_w1">你名字</div>
+                </div>
+                <div id="photo2_2">
+                    <div id="photo2_w2">你的一句話</div>
+                </div>
+                <div id="photo2_3">
+                    <div id="photo2_3_1">
+                        <div id="photo2_3_1btn">貼文</div>
+                        <div id="photo2_3_1btn">關於</div>
+                        <div id="photo2_3_1btn">朋友999</div>
+                        <div id="photo2_3_1btn">相片</div>
+                        <div id="photo2_3_1btn">限時動態典藏</div>
+                        <div id="photo2_3_1btn">更多 ▼</div>
+                    </div>
+                    <div id="photo2_3_2">
+                        <div id="photo2_3_2btn_1">
+                            <div id="photo2_3_2btnpan"></div>
+                            <div id="photo2_3_2btnw">編輯個人檔案</div>
+                        </div>
+                        <div id="photo2_3_2btn"></div>
+                        <div id="photo2_3_2btn"></div>
+                        <div id="photo2_3_2btn"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

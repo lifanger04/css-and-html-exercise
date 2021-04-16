@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        #nav{
+            width: 200px;
+            height: 100vh;
+            background-color: white;
+            float: left;
+        }
+        #main{
+            width: calc(100% - 200px);
+            height: 100vh;
+            background-color: rgb(180, 180, 180);
+            float: left;
+        }
+        .container{
+            width: 80%;
+            /* height: 100%; */
+            margin: auto;
+        }
+        #nav .container{
+            width: 150px;
+            /* height: 100vh; */
+            margin: auto;
+            /* background-color: white; */
+        }
+        .logo{
+            width: 150px;
+            height: 150px;
+            background-image: url(./img/apple-logo.png);
+            margin-top: 30px;
+        }
+        .btn-group{
+            width: 150px;
+            height: 195px;
+
+        }
+        .btn-group .btn{
+            width: 100%;
+            height: 65px;
+            margin-top: 5px;
+            background-color: rgb(236, 236, 236);
+            text-align: center;
+            line-height: 65px;
+        }
+        #main .container{
+            width: 880px;
+            padding-top: calc(50% - 440px);
+            /* padding-top: 225px; */
+            position: relative;
+        }
+        .image-group{
+            width: 880px;
+            height: 500px;
+            position: absolute;
+            top: calc(50% - 250px);
+            background-color: aqua;
+        }
+        .image{
+            width: 33%;
+            height: 100%;
+            float: left;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #x{
+            background-image: url(./img/34902574392_3c4b1c8667_b-941x480.jpg);
+        }
+        #y{
+            background-image: url(./img/blKNHoTiHk.jpg);
+            margin: 0 0.5%;
+        }
+        #z{
+            background-image: url(./img/unnamed.jpg);
+        }
+        .menu-btn{
+                display: none;
+            }
+        @media(max-width:1280px){
+            .image-group{
+                width: 750px;
+            }
+            #main{
+                width: 100%;
+            }
+            
+            #x{
+            width: 100%;
+            height: 50%;
+            
+            
+            }
+            #y,#z{
+            width: 50%;
+            height: calc(50% - 10px);
+            margin: 10px 0 0 0;
+            
+            }
+            
+            .menu-btn{
+                display: none;
+            }
+        }
+        @media(max-width:960px){
+            #nav{
+            width: 100%;
+            padding-top: 5px;
+            height: 120px;
+            }
+            #nav .container{
+            width: 100%;
+            height: 110px;
+            padding-top: 5px;
+            }
+            .logo{
+            width: 100px;
+            height: 100px;
+            margin: 0 0 0 20px;
+            background-size: contain;
+            float: left;
+            }
+            .btn-group{
+            width: 390px;
+            height: 100px;
+            /* float: left; */
+            margin: 0 5px;
+            float: right;
+            }
+            .btn-group .btn{
+            width: 100px;
+            height: 50px;
+            margin: 25px 15px;
+            float: left;
+            line-height: 50px;
+            }
+            #main{
+            width: 100%;
+            height: 700px;
+            float: left;
+            }
+            #main .container{
+            width: calc(100% - 40px);
+            height: 500px;
+            margin: 50px 20px 50px 20px;
+            background-size: contain;
+            }
+            #x{
+            width: 100%;
+            height: 250px;
+            }
+            #y{
+            width: 50%;
+            height: 250px;
+            }
+            #z{
+            width: 50%;
+            height: 250px;
+            }
+            .menu-btn{
+                display: none;
+            }
+        }
+        @media(max-width:576px){
+            #nav{
+            width: 100%;
+            padding-top: 5px;
+            height: 80px;
+            }
+            #nav .container{
+            width: 100%;
+            height: 70px;
+            padding-top: 5px;
+            }
+            .logo{
+            width: 60px;
+            height: 60px;
+            background-size: contain;
+            margin-left: calc(50% - 80px);
+            }
+            .btn-group{
+            display: none;
+            }
+            .btn-group .btn{
+            display: none;
+            }
+            .menu-btn{
+                display: block;
+                float: left;
+                margin-left: 20px;
+                line-height: 60px;
+                font-size: 30px;
+            }
+            #main{
+            width: 100%;
+            height: 700px;
+            float: left;
+            }
+            #main .container{
+            width: 100%;
+            /* height: 500px; */
+            background-size: contain;
+            margin: 0;
+            }
+            #x{
+            width: 100%;
+            /* height: 500px; */
+            }
+            #y{
+            width: 100%;
+            /* height: 250px; */
+            }
+            #z{
+            width: 100%;
+            /* height: 250px; */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div class="container">
+            <div class="menu-btn">☰</div>
+            <div class="logo"></div>
+            <div class="btn-group">
+                <div class="btn">蘋果</div>
+                <div class="btn">蘋果中的蘋果</div>
+                <div class="btn">還是蘋果</div>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div class="container">
+            <div class="image-group">
+            <div id="x" class="image"></div>
+            <div id="y" class="image"></div>
+            <div id="z" class="image"></div>
+            </div>
+            
+        </div>
+    </div>
+</body> 
+</html>

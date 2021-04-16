@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        @media(max-width:1000px){
+            
+
+        }
+        ul{padding: 0px;}
+        nav{
+            max-width: 100%;
+            height: 55px;
+            background-color: white;
+            clear: both;
+            padding: 0 100px;
+        }
+        main{
+            width: 100%;
+            padding: 0 100px;
+        }
+        .left li a {text-decoration: none;
+        color: black;
+        }
+        .right li a {text-decoration: none;
+        color: black;
+        }
+        .container{
+            width: 100%;
+            margin: auto;
+
+        }
+        .top:hover{
+            box-shadow: 0 2px;padding-bottom:5px;
+        }
+        .left-top:hover{
+            box-shadow: 0 2px;padding-bottom:5px;
+        }
+        .left{
+            float: left;
+            list-style-type:none;
+            margin: 15px 0px;
+        }
+        .left li{
+            float: left;
+            margin-right: 30px;
+        }
+        .left .li img{
+            width: 108px;
+            padding: 0 0 0 10px;
+        }
+        .top{
+            margin-top: 8px;
+        }
+        .left-top{
+            margin-top: 4px;
+        }
+        .all-microsoft div:hover{
+            box-shadow: 0 2px;padding-bottom:5px;
+        }
+        .search div:hover{
+            box-shadow: 0 2px;padding-bottom:5px;
+        }
+        .shopping-cart div:hover{
+            box-shadow: 0 2px;padding-bottom:5px;
+        }
+        .right{
+            float: right;
+            list-style-type:none;
+            margin: 10px 0px;
+        }
+        .right li{
+            float: left;
+        }
+        .right li img{
+            width: 23px;
+            height: 23px;
+            float: left;
+            position: relative;
+            top: 6px;
+        }
+        .right li div{
+            height: 23px;
+            line-height: 23px;
+            float: left;
+            position: relative;
+            top: 6px;
+        }
+
+        .right .all-microsoft{
+            margin-right: 35px;
+        }
+
+        .right .search{
+            margin-right: 45px;
+        }
+
+        .right .shopping-cart{
+            margin-right: 15px;
+        }
+        
+        .right .login div{
+            height: 35px;
+        }
+        .right .login img{
+            width: 35px;
+            height: 35px;
+            position: static;
+        }
+        .banner1{
+            width: 100%;
+            height: 510px;
+        }
+        .banner1-1{
+            height: 100%;
+            width: 100%;
+            background-image: url(./img/0403-banner-Surface\ Pro\ 7.PNG);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            position: relative;
+            float: none;
+        }
+        .banner1-1-text1{
+            position: absolute;
+            top: 40%;
+            left: 6%;
+            font-weight: 600;
+            font-size: 36px;
+
+        }
+        .banner1-1-text2{
+            position: absolute;
+            top: 50%;
+            left: 6%;
+
+        }
+        .banner1-2{
+            width: 127px;
+            height: 42px;
+            background-color: black;
+            position: absolute;
+            top: 60%;
+            left: 6%;
+            padding: 8px 20px;
+        }
+        .banner1-3{
+            height: 100%;
+            width: 100%;
+            background-image: url(./img/0403-banner-Surface\ Laptop\ 3.PNG);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            position: relative;
+            float: none;
+        }
+        .banner1-2-word{
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            margin: auto;
+            float: left;
+        }
+
+        .banner1-2-arrow{
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 0 0 5px;
+            float: left;
+        }
+        .banner1 a{
+            color: white;
+            text-decoration: none;
+        }
+        .banner1-2:hover{
+            width: 127px;
+            height: 42px;
+            background-color: black;
+            position: absolute;
+            top: 60%;
+            left: 6%;
+            padding: 8px 15px;
+        }
+        .banner1-2-word a:hover{
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            float: left;
+            margin-right: 10px;
+            text-decoration: none;
+            box-shadow: 0 1px;padding-bottom:3px;
+        }
+        .banner1-2-arrow a:hover{
+            color: white;
+            font-size: 16px;
+            /* margin-left: 10px; */
+            font-weight: 600;
+            float: left;
+            text-decoration: none;
+        }
+        .mid-menu-all{
+            height: 180px;
+            width: 540px;
+            margin: auto;
+            background-color: white;
+            padding-top: 48px;
+        }
+        .mid-menu{
+            height: 132px;
+            width: 180px;
+            background-color: white;
+            float: left;
+            
+        }
+        .mid-menu-img{
+            height: 45px;
+            width: 45px;
+            float: left;
+            margin: 20px 67.5px 5px 67.5px;
+        }
+        .mid-menu-img2{
+            margin: 30px 67.5px 0px 67.5px;
+        }
+        .mid-menu-img3{
+            margin: 25px 67.5px 5px 67.5px;
+        }
+        .mid-menu-word a{
+            text-decoration: none;
+            color: black;
+            float: left;
+            text-align: center;
+            margin: 0 0 0 42px;
+            line-height: 20px;
+        }
+        .mid-menu-word a:hover{
+            color: black;
+            float: left;
+            text-align: center;
+            margin: 0 0 0 42px;
+            line-height: 20px;
+            text-decoration: underline;
+        }
+        .content-all{
+           width: 100%;
+           height: 500px;
+           padding-top: 18px;
+           background-color: white;
+           margin-bottom: 20px;
+        }
+        .content{
+           width: calc(25% - 24px);
+           height: 377px;
+           background-color: white;
+           float: left;
+           /* margin: 0 12px; */
+        }
+        .content-margin{
+            margin-left: 32px;
+        }
+        .content-img{
+           background-size: cover;
+           margin-top: 40px;
+        }
+        .content-img img{
+            width: 100%;
+        }
+        .content-word-top{
+            font-weight: 600;
+            font-size: 24px;
+        }
+        .content-word-mid{
+            font-size: 18px;
+        }
+        .content-word-bot{
+        float: left;
+        color: rgb(0, 110, 255);
+        margin-top: 10px;
+        }
+        .content-word-arrow{
+        float: left;
+        color: rgb(0, 110, 255);
+        margin-right: 15px;
+        margin-top: 10px;
+        }
+        .content-word-bot:hover{
+            /* text-decoration: underline; */
+            margin-right: 5px;
+            box-shadow: 0 2px;padding-bottom:1px;
+
+        }
+        .banner2{
+            width: 100%;
+            height: 510px;
+        }
+        .banner2-1{
+            height: 100%;
+            width: 100%;
+            background-image: url(./img/0403-banner-Microsoft\ OneDrive.PNG);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            position: relative;
+            float: none;
+        }
+        .banner2-1-text1{
+            position: absolute;
+            top: 40%;
+            left: 6%;
+            font-weight: 600;
+            font-size: 36px;
+
+        }
+        .banner2-1-text2{
+            position: absolute;
+            top: 50%;
+            left: 6%;
+
+        }
+        .banner2-2{
+            width: 127px;
+            height: 42px;
+            background-color: black;
+            position: absolute;
+            top: 60%;
+            left: 6%;
+            padding: 8px 20px;
+        }
+        .banner2-2-word{
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            margin: auto;
+            float: left;
+        }
+        .banner2-2-arrow{
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 0 0 5px;
+            float: left;
+        }
+        .banner2 a{
+            color: white;
+            text-decoration: none;
+        }
+        .banner2-2:hover{
+            width: 127px;
+            height: 42px;
+            background-color: black;
+            position: absolute;
+            top: 60%;
+            left: 6%;
+            padding: 8px 15px;
+        }
+        .banner2-2-word a:hover{
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            float: left;
+            margin-right: 10px;
+            text-decoration: none;
+            box-shadow: 0 1px;padding-bottom:3px;
+        }
+        .banner2-2-arrow a:hover{
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            float: left;
+            text-decoration: none;
+        }
+        .mid-word{
+            width: 100%;
+            height: 32px;
+            background-color: white;
+            margin-top: 48px;
+            font-size: 30px;
+            font-weight: 600;
+        }
+        .External-link{
+            width: 100%;
+            height: 32px;
+            margin-top: 48px;
+            background-color: white;
+            margin-bottom: 48px;
+        }
+        .link-word{
+            color: gray;
+            font-size: 18px;
+            float: left;
+            margin-right: 10px;
+        }
+        .link-fb {
+            margin-right: 10px;
+            float: left;
+        }
+        .link-youtube{
+            margin-right: 10px;
+            float: left;
+        }
+        .footer-top{
+            width: 100%;
+            height: 320px;
+            background-color: rgb(240, 240, 240);
+            padding: 0 100px;
+            
+        }
+        .footer-top ul{
+            list-style-type: none;
+            float: left;
+            color: black;
+            margin-right: 80px;
+            line-height: 33px;
+            font-size: 14px;
+
+        }
+        .footer-1-word{
+            list-style-type: none;
+            float: left;
+            color: black;
+            margin-right: 100px;
+            line-height: 33px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .footer-top ul a{
+            text-decoration: none;
+            color: black;
+        }
+        .footer-top ul a:hover{
+            text-decoration: underline;
+        }
+        .footer-bot{
+            width: 100%;
+            height: 71px;
+            padding: 30px 100px 15px 100px;
+            background-color: rgb(240, 240, 240);
+        }
+        .footer-bot1{
+            width: 200px;
+            height: 25px;
+            float: left;
+
+        }
+        .footer-bot1-img{
+            float: left;
+            margin-right: 5px;
+        }
+        .footer-bot1-word a{
+            text-decoration: none;
+            color: black;
+        }
+        .footer-bot1-word a:hover{
+            text-decoration: underline;
+        }
+        .footer-bot2{
+            height: 25px;
+            float: right;
+        }
+        .footer-bot2 ul{
+            margin: 0;
+        }
+        .footer-bot2 ul li{
+            list-style-type: none;
+            float: right;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        #footer-bot2-Microsoft2021{
+            margin-top: 2.5px;
+        }
+        .footer-bot2 ul li a{
+            text-decoration: none;
+            color: black;
+        }
+        .footer-bot2 ul li a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <div class="container">
+            <ul class="left">
+                <li><a href="./0401-超連結.html"><img src="./img/microsoft.PNG"></a></li>
+                <li class="top"><a href="https://www.microsoft.com/zh-tw/microsoft-365?rtc=1">Microsoft 365</a></li>
+                <li class="top"><a href="https://www.microsoft.com/zh-tw/microsoft-365/microsoft-office?rtc=1">Office</a></li>
+                <li class="top"><a href="https://www.microsoft.com/zh-tw/windows/">Windows</a></li>
+                <li class="top"><a href="https://www.microsoft.com/zh-tw/surface">Surface</a></li>
+                <li class="top"><a href="https://www.xbox.com/zh-TW/">Xbox</a></li>
+                <li class="left-top"><a href="https://support.microsoft.com/zh-tw">支援</a></li>
+            </ul>
+            <ul class="right">
+                <li class="all-microsoft">
+                    <div>所有microsoft</div>
+                    <img src="./img/0403-arrow.PNG" > 
+                </li>
+                <li class="search">
+                    <div>搜尋</div>
+                    <img src="./img/0403-magnifier.PNG" > 
+                </li>
+                <li class="shopping-cart"><a href="https://www.microsoft.com/zh-tw/store/cart">
+                    <div>購物車</div>
+                    <img src="./img/0403-shopping cart.PNG" > </a>
+                </li>
+                <li class="login"><a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=13&rver=7.3.6963.0&wp=MBI_SSL&wreply=https%3a%2f%2fwww.microsoft.com%2fzh-tw%2fstore%2fcart&lc=1028&id=74335">
+                    <div>登入</div>
+                    <img src="./img/0403-Photo sticker.PNG" > </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+    <div class="banner1">
+        <div class="banner1-1">
+            <div class="banner1-1-text1">Surface Pro 7</div>
+            <div class="banner1-1-text2">纖變萬化</div>
+            <div class="banner1-2">
+                <div class="banner1-2-word"><a href="https://www.microsoft.com/zh-tw/surface/devices/surface-pro-7?activetab=overview&icid=mscom_marcom_H1a_SurfacePro7">立即選購</a></div>
+                <div class="banner1-2-arrow"><a href="https://www.microsoft.com/zh-tw/surface/devices/surface-pro-7?activetab=overview&icid=mscom_marcom_H1a_SurfacePro7">＞</a> </div>
+            </div>
+        </div>
+        <!-- <div class="banner1-3">
+            <div class="banner1-1-text1">Surface Laptop 3</div>
+            <div class="banner1-1-text2">每天使用的完美筆記型電腦，速度比以往更快</div>
+            <div class="banner1-2">
+                <div class="banner1-2-word"><a href="https://www.microsoft.com/zh-tw/surface/devices/surface-pro-7?activetab=overview&icid=mscom_marcom_H1a_SurfacePro7">立即選購</a> </div>
+                <div class="banner1-2-arrow"><a href="https://www.microsoft.com/zh-tw/surface/devices/surface-pro-7?activetab=overview&icid=mscom_marcom_H1a_SurfacePro7">＞</a> </div>
+            </div> -->
+    </div>
+    <div class="mid-menu-all">
+        <div class="mid-menu">
+            <div class="mid-menu-img"><img src="./img/0403-microsoft 365.PNG" alt=""></div>
+            <div class="mid-menu-word"><a href="https://www.microsoft.com/zh-tw/microsoft-365/buy/compare-all-microsoft-365-products?icid=MSCOM_QL_M365">選擇您的<br>Microsoft 365</a></div>
+        </div>
+        <div class="mid-menu">
+            <div class="mid-menu-img mid-menu-img2"><img src="./img/0403-Surface.PNG" alt=""></div>
+            <div class="mid-menu-word"><a href="https://www.microsoft.com/zh-tw/surface?icid=MSCOM_QL_Surface">選購 Surface 裝置</a></div>
+        </div>
+        <div class="mid-menu">
+            <div class="mid-menu-img mid-menu-img3"><img src="./img/0430-Windows 10.PNG" alt=""></div>
+            <div class="mid-menu-word"><a href="https://www.microsoft.com/zh-tw/store/collections/windows?icid=MSCOM_QL_Windows">選購 Windows 10</a></div>
+        </div>
+    </div>
+    <div class="content-all">
+    <div class="content">
+        <div class="content-img"><img src="./img/0403-feacture-Surface Laptop Go.PNG" alt=""></div>
+        <div class="content-word-top">Surface Laptop Go</div>
+        <div class="content-word-mid">運用時尚和效能兼具、最輕巧的 Surface 筆記型電腦，善加利用每一天。</div>
+        <div class="content-word-bot">立即選購</div>
+        <div class="content-word-arrow">＞</div>
+    </div>
+    <div class="content content-margin">
+        <div class="content-img"><img src="./img/0403-feacture-Microsoft 365.PNG" alt=""></div>
+        <div class="content-word-top">Microsoft 365</div>
+        <div class="content-word-mid">進階版 Office 應用程式、額外的雲端儲存空間、進階安全性等功能，全都在一個方便的訂閱中。</div>
+        <div class="content-word-bot">最多可供 6 人使用</div>
+        <div class="content-word-arrow">＞</div>
+        <div class="content-word-bot">適合 1 人使用</div>
+        <div class="content-word-arrow">＞</div>
+    </div>
+    <div class="content content-margin">
+        <div class="content-img"><img src="./img/0403-feacture-Xbox Game Pass Ultimate.PNG" alt=""></div>
+        <div class="content-word-top">Xbox Game Pass Ultimate</div>
+        <div class="content-word-mid">Xbox Live Gold 和超過 100 款高品質的主機遊戲和電腦遊戲。 與好友同樂，並探索下一個最愛遊戲。</div>
+        <div class="content-word-bot">立即加入</div>
+        <div class="content-word-arrow">＞</div>
+    </div>
+    <div class="content content-margin">
+        <div class="content-img"><img src="./img/0403-feacture-Microsoft Edge.PNG" alt=""></div>
+        <div class="content-word-top">Microsoft Edge</div>
+        <div class="content-word-mid">在您瀏覽時提供世界級的效能，以及更多的隱私、更充足的生產力與更高的價值。</div>
+        <div class="content-word-bot">立即下載</div>
+        <div class="content-word-arrow">＞</div>
+    </div>
+    </div>
+    <div class="banner2">
+        <div class="banner2-1">
+            <div class="banner2-1-text1">Microsoft OneDrive</div>
+            <div class="banner2-1-text2">將檔案和相片儲存到 OneDrive，即可隨時隨地從任何裝置存取</div>
+            <div class="banner2-2">
+            <div class="banner2-2-word"><a href="https://www.microsoft.com/zh-tw/microsoft-365/onedrive/online-cloud-storage?icid=mscom_marcom_MPH1a_OneDrive">深入了解</a> </div>
+            <div class="banner2-2-arrow"><a href="https://www.microsoft.com/zh-tw/microsoft-365/onedrive/online-cloud-storage?icid=mscom_marcom_MPH1a_OneDrive">＞</a></div>
+        </div></div>
+    </div>
+    <div class="mid-word">適用於商務</div>
+    <div class="content-all">
+        <div class="content">
+            <div class="content-img"><img src="./img/0403-feacture2-Surface.PNG" alt=""></div>
+            <div class="content-word-top">適用於商務的 Surface</div>
+            <div class="content-word-mid">無論從事哪種工作，都有一款有助於成功的 Surface。</div>
+            <div class="content-word-bot">立即選購</div>
+            <div class="content-word-arrow">＞</div>
+        </div>
+        <div class="content content-margin">
+            <div class="content-img"><img src="./img/0403-feacture2-Microsoft 365.PNG" alt=""></div>
+            <div class="content-word-top">Microsoft 365 商務版</div>
+            <div class="content-word-mid">透過功能強大的應用程式提高生產力、聯繫和安全，始終領先一步。</div>
+            <div class="content-word-bot">立即選購</div>
+            <div class="content-word-arrow">＞</div>
+        </div>
+        <div class="content content-margin">
+            <div class="content-img"><img src="./img/0403-feacture2-Microsoft Teams.PNG" alt=""></div>
+            <div class="content-word-top">Microsoft Teams</div>
+            <div class="content-word-mid">聊天、開會、通話和共同作業。</div>
+            <div class="content-word-bot">深入了解</div>
+            <div class="content-word-arrow">＞</div>
+        </div>
+        <div class="content content-margin">
+            <div class="content-img"><img src="./img/0403-feacture2-Microsoft Viva.PNG" alt=""></div>
+            <div class="content-word-top">Microsoft Viva 簡介</div>
+            <div class="content-word-mid">探索新的員工體驗平台，其設計旨在讓人員在工作時聯繫、專注、學習和成長。</div>
+            <div class="content-word-bot">深入了解</div>
+            <div class="content-word-arrow">＞</div>
+        </div>
+    </div>
+    <div class="External-link">
+        <div class="link-word">關注 Microsoft</div>
+        <div class="link-fb"><img src="./img/0403-fb.PNG" alt=""></div>
+        <div class="link-youtube"><img src="./img/0403-youtube.PNG" alt=""></div>
+    </div>
+    </main>
+    <footer>
+        <div class="footer-all">
+            <div class="footer-top">
+                <ul class="footer-1">
+                <li class="footer-1-word">最新動向</li>
+                <li><a href="https://www.microsoft.com/zh-tw/microsoft-365?rtc=1">Microsoft 365</a> </li>
+                <li><a href="https://www.microsoft.com/zh-tw/surface/devices/surface-go">Surface Go</a></li>
+                <li><a href="https://www.microsoft.com/zh-tw/surface/devices/surface-book-2?activetab=surface_book_2_pivot%3aprimaryr3">Surface Book 2</a> </li>
+                <li><a href="https://www.microsoft.com/zh-tw/surface/devices/surface-pro-7?activetab=overview">Surface Pro</a></li>
+                <li><a href="https://www.microsoft.com/zh-tw/windows/windows-10-apps">Windows 10 應用程式</a></li>
+            </ul>
+            <ul class="footer-2">
+                <li class="footer-1-word">Microsoft Store</li>
+                <li><a href="https://account.microsoft.com/account/Account?refd=www.microsoft.com&ru=https%3A%2F%2Faccount.microsoft.com%2F%3Frefd%3Dwww.microsoft.com&destrt=home-index">帳戶設定檔</a></li>
+                <li><a href="https://www.microsoft.com/zh-tw/download">下載中心</a></li>
+                <li><a href="https://support.microsoft.com/zh-tw/office/microsoft-store-109d8aed-d32f-4d6f-9c54-ff80871e8637?ui=zh-TW&rs=zh-TW&ad=TW">Microsoft Store 支援</a></li>
+                <li><a href="https://support.microsoft.com/zh-tw/account-billing/%E9%80%80%E5%9B%9E%E6%82%A8%E5%BE%9E-microsoft-store-%E8%B3%BC%E8%B2%B7%E7%9A%84%E5%95%86%E5%93%81%E4%BB%A5%E9%80%B2%E8%A1%8C%E6%8F%9B%E8%B2%A8%E6%88%96%E9%80%80%E6%AC%BE-81629012-aa4f-f48b-2394-8596f415072b">退貨/退款</a></li>
+                <li><a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=13&ct=1617542384&rver=7.0.6738.0&wp=MBI_SSL&wreply=https%3A%2F%2Faccount.microsoft.com%2Fauth%2Fcomplete-signin%3Fru%3Dhttps%253A%252F%252Faccount.microsoft.com%252Fbilling%252Forders%253FforcedSignIn%253D1%2526refd%253Dwww.microsoft.com&lc=1028&id=292666&lw=1&fl=easi2">訂單追蹤</a></li>
+            </ul>
+            <ul class="footer-3">
+                <li class="footer-1-word">教育</li>
+                <li><a href="https://www.microsoft.com/zh-tw/education"><br>Microsoft 在教育領域的應用</a></li>
+                <li><a href="https://www.microsoft.com/zh-tw/education/products/office/default.aspx">學生適用的 Office</a></li>
+                <li><a href="https://www.microsoft.com/zh-tw/microsoft-365/academic/compare-office-365-education-plans?activetab=tab%3aprimaryr1">學校適用的 Office 365</a></li>
+                <li><a href="https://azure.microsoft.com/zh-tw/developer/students/">Microsoft Azure 在教育領域的應用</a></li>
+            </ul>
+            <ul class="footer-4">
+                <li class="footer-1-word">企業</li>
+                <li><a href="https://azure.microsoft.com/zh-tw/">Azure</a></li>
+                <li><a href="https://appsource.microsoft.com/zh-TW/">AppSource</a></li>
+                <li><a href="https://www.microsoft.com/zh-tw/industry/automotive?rtc=1">汽車</a></li>
+                <li><a href="https://www.microsoft.com/zh-tw/industry/government?rtc=1">政府機構</a></li>
+                <li><a href="https://www.microsoft.com/zh-tw/industry/health?rtc=1">醫療保健</a></li>
+                <li><a href="https://www.microsoft.com/zh-tw/industry/manufacturing?rtc=1">製造</a></li>
+                <li><a href="https://www.microsoft.com/zh-tw/industry/financial-services/banking?rtc=1">金融服務</a></li>
+                <li><a href="https://www.microsoft.com/zh-tw/industry/retail-consumer-goods?rtc=1">零售</a></li>
+            </ul>
+            <ul class="footer-5">
+                <li class="footer-1-word">開發人員</li>
+                <li><a href="https://visualstudio.microsoft.com/zh-hant/">Microsoft Visual Studio</a></li>
+                <li><a href="https://developer.microsoft.com/zh-tw/windows/">Windows 開發人員中心</a></li>
+                <li><a href="https://developer.microsoft.com/zh-tw/">開發人員中心</a></li>
+                <li><a href="https://developer.microsoft.com/zh-tw/store/register/">Microsoft 開發人員計畫</a></li>
+                <li><a href="https://channel9.msdn.com/">Channel 9</a></li>
+            </ul>
+            <ul class="footer-6">
+                <li class="footer-1-word">公司</li>
+                <li><a href="https://careers.microsoft.com/us/en">人才招募</a></li>
+                <li><a href="https://news.microsoft.com/zh-tw/">公司新聞</a></li>
+                <li><a href="https://privacy.microsoft.com/zh-tw">Microsoft 隱私權</a></li>
+                <li><a href="https://www.microsoft.com/en-us/investor">投資者</a></li>
+                <li><a href="https://www.microsoft.com/zh-tw/security">安全性</a></li>
+            </ul>
+            </div>
+            <div class="footer-bot">
+                <div class="footer-bot1">
+                    <div class="footer-bot1-img"><img src="./img/0403-earth.PNG" alt=""></div>
+                    <div class="footer-bot1-word"><a href="https://www.microsoft.com/en-us/locale.aspx?absoluteReturnUrl=https%3a%2f%2fwww.microsoft.com%2fzh-tw">中文(台灣)</a></div>
+                </div>
+                <div class="footer-bot2">
+                    <ul>
+                        <li id="footer-bot2-Microsoft2021">© Microsoft 2021</li>
+                        <li><a href="https://account.microsoft.com/privacy/ad-settings/signedout?refd=www.microsoft.com&ru=https:%2F%2Faccount.microsoft.com%2Fprivacy%2Fad-settings%3Frefd%3Dwww.microsoft.com">有關我們的廣告訊息</a></li>
+                        <li><a href="https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general">商標</a></li>
+                        <li><a href="https://www.microsoft.com/en-us/legal/intellectualproperty/copyright">使用規定</a></li>
+                        <li><a href="https://privacy.microsoft.com/zh-tw/privacystatement">隱私權</a></li>
+                        <li><a href="https://support.microsoft.com/contactus">連絡 Microsoft</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        #nav{
+            width: 200px;
+            height: 100vh;
+            background-color: white;
+            float: left;
+        }
+        #main{
+            width: calc(100% - 200px);
+            height: 100vh;
+            background-color: rgb(180, 180, 180);
+            float: left;
+        }
+        #nav .container{
+            width: 150px;
+            /* height: 100vh; */
+            margin: auto;
+            background-color: white;
+        }
+        .logo{
+            width: 150px;
+            height: 150px;
+            background-image: url(./img/apple-logo.png);
+            margin-top: 30px;
+        }
+        .logo:hover{
+            background-image: url(./img/apple.jpg);
+            transition: 1s;
+
+        }
+        .btn-group{
+            width: 150px;
+            height: 195px;
+
+        }
+        .btn-group .btn{
+            width: 100%;
+            height: 65px;
+            margin-top: 5px;
+            background-color: rgb(236, 236, 236);
+            text-align: center;
+            line-height: 65px;
+        }
+        #main .container{
+            width: 880px;
+            height: 100vh;
+            /* background-color: white; */
+            margin: auto;
+            position: relative;
+        }
+        .image-group{
+            width: 880px;
+            height: 500px;
+            background-color: white;
+            position: absolute;
+            top: calc(50% - 250px);
+        }
+        .image{
+            width: 33%;
+            height: 100%;
+            background-size: cover;
+            float: left;
+            background-repeat: no-repeat;
+        }
+        #x{
+            background-image: url(./img/34902574392_3c4b1c8667_b-941x480.jpg);
+        }
+        #x:hover{
+            background-image: url(./img/cat.jpg);
+            transition: 1s;
+
+        }
+        #y{
+            background-image: url(./img/blKNHoTiHk.jpg);
+            margin: 0 0.5%;
+        }
+        #y:hover{
+            background-image: url(./img/cat2.jpg);
+            transition: 1s;
+            opacity: 0.5;
+
+        }
+        #z{
+            background-image: url(./img/unnamed.jpg);
+        }
+        #z:hover{
+            background-image: url(./img/cat3.jpg);
+            transition: 1s;
+
+        }
+        .menu-btn{
+                display: none;
+            }
+        @media(max-width:1280px){
+            #main .container{
+                width: 750px;
+            
+        }
+            .image-group{
+                width: 750px;
+                height: 500px;
+            
+        }
+            #x{
+                width: 100%;
+                height: 50%;
+            
+            }
+            #y,#z{
+                width: calc(50% - 5px);
+                height: calc(50% - 10px);
+                margin: 10px 0 0 0 ;
+            }
+            #z{
+                margin-left: 10px;
+            }
+            
+        }
+        @media(max-width:960px){
+            #nav{
+                width: 100%;
+                padding-top: 5px;
+                height: 120px;
+            }
+            #nav .container{
+                width: 100%;
+                height: 110px;
+                padding-top: 5px;
+            }
+            .logo{
+                width: 100px;
+                height: 100px;
+                margin: 0 0 0 20px;
+                background-size: contain;
+                float: left;
+            }
+            .btn-group{
+                width: 390px;
+                height: 100px;
+                /* float: left; */
+                margin: 0 5px;
+                float: right;
+            }
+            .btn-group .btn{
+                width: 100px;
+                height: 50px;
+                margin: 25px 15px;
+                float: left;
+                line-height: 50px;
+                font-size: 12px;
+            }
+            #main{
+                width: 100%;
+                min-height: calc(100vh - 120px);
+                height: unset;
+                float: left;
+                }
+            #main .container{
+                width: 90%;
+                padding: calc(calc(100vh - 920px) / 2) 0;
+                /* position: relative; */
+            }
+            .image-group{
+                width: 100%;
+                height: 800px;
+                /* position: absolute; */
+                position: static;
+                top: calc(50% - 400px);
+            }
+            #x{
+                width: 100%;
+                height: 400px;
+            }
+            #y,#z{
+                width: calc(50% - 5px);
+                height: calc(50% - 10px);
+                margin: 10px 0 0 0 ;
+            }
+            #z{
+                margin-left: 10px;
+            }
+            
+        }
+        @media(max-width:576px){
+            #nav{
+                width: 100%;
+                padding-top: 5px;
+                height: 80px;
+            }
+            #nav .container{
+                width: 100%;
+                height: 70px;
+                padding-top: 5px;
+                position: relative;
+            }
+            .logo{
+                width: 60px;
+                height: 60px;
+                background-size: contain;
+                margin-left: calc(50% - 80px);
+            }
+            .btn-group{
+                width: 150px;
+                float: right;
+                height: 200px;
+                margin-top: 70px;
+                position: absolute;
+                left: 0px;
+                z-index: 1;
+                display: none;
+            }
+            
+            .btn-group .btn{
+                clear: both;
+                margin: 0 0 5px 0;
+            }
+            .menu-btn{
+                display: block;
+                float: left;
+                margin-left: 20px;
+                line-height: 60px;
+                font-size: 30px;
+                width: 150px;
+                height: 200px;
+            }
+            .menu-btn:hover + .btn-group{
+                display: block;
+
+            }
+            .btn-group:hover{
+                display: block;
+            }
+            #main{
+                width: 100%;
+                height: unset;
+                
+            }
+            #main .container{
+                width: 100%;
+                padding: 0 ;
+                height: unset;
+                display: inline-block;
+            }
+            .image-group{
+                width: 100%;
+                display: inline-block;
+                position: static;
+                top: calc(50% - 400px);
+            }
+            #x{
+                width: 100%;
+            }
+            #y{
+                width: 100%;
+                margin: 0;
+            }
+            #z{
+                width: 100%;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div class="container">
+            <div class="menu-btn">☰</div>
+            <div class="btn-group">
+                <div class="btn x">蘋果</div>
+                <div class="btn y">蘋果中的蘋果</div>
+                <div class="btn z">還是蘋果</div>
+            </div>
+            <div class="logo"></div>
+        </div>
+    </div>
+    <div id="main">
+        <div class="container">
+            <div class="image-group">
+                <div id="x" class="image"></div>
+                <div id="y" class="image"></div>
+                <div id="z" class="image"></div>
+            </div>
+            
+        </div>
+    </div>
+</body> 
+</html>
